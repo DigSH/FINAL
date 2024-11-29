@@ -16,10 +16,10 @@ def start(update: Update, context: CallbackContext):
     user = update.message.from_user
     welcome_message = (
         f"Hola {user.first_name}, ¿has sido testigo de un delito?"
-        "Envía evidencia del delito y contribuye a la seguridad colombiana"
+        "Envía evidencia del delito y contribuye a la seguridad colombiana\n\n"
         "**Términos y Condiciones:**\n"
         "1. Al usar este bot, aceptas los términos y condiciones de nuestro servicio.\n"
-        "3. Los datos proporcionados serán tratados con confidencialidad y según nuestra política de privacidad.\n"
-        "5. Para más detalles, visita nuestra página de términos y condiciones."
+        "2. Los datos proporcionados serán tratados con confidencialidad y según nuestra política de privacidad.\n"
+        "3. Para más detalles, visita nuestra página de términos y condiciones: https://digsh.github.io/FINAL/index.html"
     )
     context.bot.send_message(chat_id=update.effective_chat.id, text=welcome_message, parse_mode='Markdown')
