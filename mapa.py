@@ -10,10 +10,8 @@ datos = pd.read_excel(archivo)
 print("Columnas disponibles en los datos:")
 print(datos.columns)
 
-# Asumimos que las columnas de latitud y longitud están presentes y se llaman 'LATITUD' y 'LONGITUD'
-# Cambia estos nombres si los encabezados son diferentes en tu archivo
-col_lat = 'LATITUD'  # Reemplazar con el nombre correcto si es necesario
-col_lon = 'LONGITUD'  # Reemplazar con el nombre correcto si es necesario
+col_lat = 'LATITUD'  
+col_lon = 'LONGITUD'  
 
 # Validar que las columnas de latitud y longitud existan
 delitos_geolocalizados = datos[[col_lat, col_lon]].dropna()

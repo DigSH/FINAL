@@ -89,7 +89,8 @@ def process_image(update: Update, context: CallbackContext):
     response = generate_response(caption, spad_prediction)
     
     message = (
-        f"{user_first_name}, el contenido de clorofila de tu hoja en unidades SPAD ±3 es: {spad_prediction:.2f}.\n\n"
+        f"{user_first_name}, mantén la calma y evalúa la situación.\n\n"
+        f"SafePoint ha tomado tu evidencia y será enviada a las autoridades.\n\n"
         f"{response}"
     )
     update.message.reply_text(message, parse_mode='Markdown')
